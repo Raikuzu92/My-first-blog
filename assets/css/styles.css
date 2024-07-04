@@ -1,3 +1,70 @@
-p{
-    color: aqua;
+:root{
+    background-color: grey;
+    
+
 }
+
+
+.column {
+    width: 45%; /* Adjust the width as needed */
+    float: left; /* Float the columns next to each other */
+    padding: 10px; /* Padding inside each column */
+    border: 10px solid #ccc; /* Border style */
+    margin: 10px; /* Margin between columns */
+    min-height: fit-content;
+}
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.footer {
+        background-color: #f2f2f2;
+        padding: 10px;
+        text-align: center;
+    }
+
+.column img{
+    max-width: 100%;
+    
+}
+
+.input-container1{
+    padding-top: 10%;
+    margin:20px;
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+}
+
+.input-container2{
+    padding-top: 5%;
+    margin:20px;
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+}
+
+.input-container3{
+    padding-top: 5%;
+    margin:20px;
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+#input3{
+    height: 900px;
+}
+
+
+
+
+
+
+
+
+

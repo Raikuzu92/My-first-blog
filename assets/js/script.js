@@ -1,14 +1,41 @@
-console.log('hat')
-const column = document.querySelector('column');
+// console.log('hat')
 
-function submitForm(){
-    var email= document.getElementById('input1').value;
-    var username= document.getElementById('input2').value;
-    var comments = document.getElementById('comments').value;
+const submitBtn = document.getElementById('submitForm');
+const titleInput = document.getElementById('title');
+const usernameInput = document.getElementById('Username');
+const blogInput = document.getElementById('BlogPost');
 
-    //console.log('Email:' email);
-    console.log('Username', username);
-    console.log('Comments', comments);
+submitBtn.addEventListener('click', function (event) {
+    event.preventDefault();
+
+    const formData = {
+        Username: usernameInput.value.trim(),
+        Title: titleInput.value.trim(),
+        Comments: blogInput.value.trim(),
+    };
+
+    if (usernameInput.value === "" || titleInput.value === "" || blogInput.value === "") {
+        alert('Please enter all fields');
+    } else {
+        let blogs = JSON.parse(localStorage.getItem('Blogs')) || [];
+
+        // Add the new form data to the array
+        blogs.push(formData);
+
+        // Store the updated array back into localStorage
+        localStorage.setItem('Blogs', JSON.stringify(blogs));
+    
+        console.log(formData);
+
+        location.href = "./blog.html";
+    }
+});
+
+console.log('Username');
+console.log('Title');
+console.log('BlogPost');
 
 
-}
+
+
+

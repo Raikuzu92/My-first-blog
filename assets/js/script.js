@@ -4,7 +4,30 @@ const submitBtn = document.getElementById('submitForm');
 const titleInput = document.getElementById('title');
 const usernameInput = document.getElementById('Username');
 const blogInput = document.getElementById('BlogPost');
+const themeSwitcher = document.querySelector('#theme-switcher');
+const container = document.querySelector('.container');
 
+// Set default mode to dark
+let mode = 'dark';
+
+// Listen for a click event on toggle switch
+themeSwitcher.addEventListener('click', function () {
+  // If mode is dark, apply light background
+  if (mode === 'dark') {
+    mode = 'light';
+    container.setAttribute('class', 'light');
+  }
+  // If mode is light, apply dark background
+  else {
+    mode = 'dark';
+    container.setAttribute('class', 'dark');
+  }
+});
+
+
+
+
+//Event listener for submit button
 submitBtn.addEventListener('click', function (event) {
     event.preventDefault();
 
@@ -27,7 +50,7 @@ submitBtn.addEventListener('click', function (event) {
     
         console.log(formData);
 
-        location.href = "./blog.html";
+       location.href = "./blog.html";
     }
 });
 

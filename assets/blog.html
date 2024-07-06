@@ -3,9 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Recent blogs</title>
+    <link rel="stylesheet" href="./css/blog.css">
+    <link rel="stylesheet" href="./js/script.js">
+    
 </head>
 <body>
-    
+    <div class="container dark">
+        <div class="row toggle">
+          <div class="col">
+            <p>DARK MODE</p>
+          </div>
+          <label class="switch col">
+            <input type="checkbox" id="theme-switcher">
+            <span class="slider round"></span>
+          </label>
+          <div class="col">
+            <p>LIGHT MODE</p>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <p id= "light-mode"></p>
+            <p id = "dark-mode"></p>
+
+ <ul id="blogs"></ul>
+
+ <div class = "footer">
+    <p> Copyright 2024 Imposters Incorperated.</p>
+    <a href="raikuzu92.github.io/Portfolio">My Portfolio!</a>
+</div>
+
+    <script src="./js/script.js"></script>
+    <script src= "./js/blog.js"></script>
 </body>
 </html>
